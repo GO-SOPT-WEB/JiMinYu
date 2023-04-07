@@ -8,21 +8,18 @@ body {
 header {
   display: flex;
   position: sticky;
-  justify-content: space-between;
-  background-color: lightgreen;
-  color: chocolate;
+  top: 0;
+  padding: 20px 15px;
+  width: 100%;
   font-weight: bold;
-  font-size: 20px;
-  font-family: serif;
+  font-size: 40px;
+  /* block인 경우에는 width 100 설정이 불필요한 것 같긴 한데,, */
+  /*왜 align-items 없이 패딩만 주면 햄버거바가 탈출하는가??*/
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgreen;
+  color: brown;
 }
-/* 
-  header h1 {
-    justify-content: flex-start;
-  }
-  
-  header span {
-    justify-content: flex-end;
-  } */
 
 body {
   background-color: lemonchiffon;
