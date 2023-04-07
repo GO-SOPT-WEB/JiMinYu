@@ -64,6 +64,7 @@ header > h1 {
   height: 30px;
 }
 
+/* 하트랑 글자 겹쳐주기 */
 .weekly-section__item__to-do-num span {
   position: absolute;
   top: 22%;
@@ -77,7 +78,7 @@ header > h1 {
   margin-top: 30px;
 }
 
-.to-do__item {
+/* 투두리스트 부분 */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -86,6 +87,7 @@ header > h1 {
   font-size: 30px;
   padding: 10px;
   font-weight: bold;
+/* nth-child 써서 배경색 다르게 적용하고 싶은데 잘못 쓰고 있는지 이상해져서 하나씩 적용했다,, */
   background-color: plum;
   border-radius: 10px;
 }
@@ -102,6 +104,7 @@ header > h1 {
   margin: 10px 0px;
 }
 
+/* 밑에 버튼 두 개 */
 .footer {
   display: flex;
   justify-content: center;
@@ -111,6 +114,7 @@ header > h1 {
   width: 30px;
   height: 30px;
   margin-bottom: 5px;
+  color: white; /*나중에 색깔 적용되게 수정하기*/
 }
 
 .footer__items__calendar,
