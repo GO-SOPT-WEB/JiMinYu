@@ -24,12 +24,14 @@ header {
   font-weight: bold;
   font-size: 50px;
   color: coral;
+  z-index: 1;
 }
 
 header > h1 {
   text-align: center;
 }
 
+/* 달력 부분 */
 .weekly-section {
   display: grid;
   width: 412px;
