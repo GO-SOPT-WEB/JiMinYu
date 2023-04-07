@@ -1,0 +1,8 @@
+@import "reset.css";
+
+@media (min-width: 768px) {
+  body {
+    /*웹앱 화면 설정하는 거 더 공부하기*/
+    width: 412px;
+    height: 100vh;
+  }
