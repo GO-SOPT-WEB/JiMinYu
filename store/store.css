@@ -102,6 +102,9 @@ nav a {
   color: gray;
   margin-top: 5px;
   justify-content: space-between;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .hashtag {
