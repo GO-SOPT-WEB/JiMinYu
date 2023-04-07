@@ -88,6 +88,9 @@ nav a {
   background-color: white;
   border-radius: 10px;
   margin: 5px;
+  white-space: nowrap; /*모양이 뭔가 이상하다. 그냥 양쪽으로 삐져나오는 것만 안 보이게 해주는 듯*/
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-item__name {
