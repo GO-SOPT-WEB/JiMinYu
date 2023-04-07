@@ -44,6 +44,7 @@ header > h1 {
   align-items: center;
   background-color: white;
   border-radius: 10px;
+  padding: 0px 5px;
   margin: 5px;
   text-align: center;
 }
@@ -83,8 +84,14 @@ header > h1 {
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+.to-do__item {
+  margin: 20px 20px;
+}
+
 .to-do__item__title {
-  font-size: 30px;
+  width: fit-content;
+  font-size: 23px;
   padding: 10px;
   font-weight: bold;
 /* nth-child 써서 배경색 다르게 적용하고 싶은데 잘못 쓰고 있는지 이상해져서 하나씩 적용했다,, */
@@ -93,11 +100,14 @@ header > h1 {
 }
 
 .to-do__item__title__button {
+  /* 아이콘 색깔 바꾸고 싶다.. */
   width: 22px;
   height: 22px;
+  margin-left: 5px;
 }
+
 .to-do__item__list__detail {
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px;
   font-weight: bold;
   border-radius: 10px;
@@ -108,6 +118,7 @@ header > h1 {
 .footer {
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .footer img {
@@ -119,6 +130,7 @@ header > h1 {
 
 .footer__items__calendar,
 .footer__items__my {
+  background-color: pink;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
