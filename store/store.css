@@ -31,12 +31,13 @@ main {
 }
 
 nav {
-  width: 14vw;
+  width: 18vw;
+  height: 25vh;
   border-radius: 20px; /*radius 설정할 때 왜 px 설정이 %보다 더 자연스러운지 차이 찾아보기*/
   margin-top: 18px;
   margin-left: 10px;
   padding: 8px 10px;
-  position: sticky;
+  position: sticky; /*nav 스티키 적용이 안 되고 있는 것 같습니다,, 카드 아이템들이랑 같이 스크롤 되는 문제 미해결*/
   background-color: lightgreen;
   color: brown;
   display: flex;
@@ -73,4 +74,48 @@ nav a {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 14vw;
+  height: 35vh;
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.card-item__name {
+  /* 이 이름이 항상 카드 위쪽에 붙어 있게 하고 싶다*/
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.hashtag-list {
+  font-size: 13px;
+  display: flex;
+  /* font-weight: bold; */
+  color: gray;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+
+.hashtag {
+  margin-right: 5px;
+}
+
+.card-item__image {
+  width: 150px;
+  height: 150px;
+}
+
+.card-item__like {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: white;
 }
