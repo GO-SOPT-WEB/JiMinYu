@@ -80,9 +80,13 @@ header > h1 {
 }
 
 /* 투두리스트 부분 */
+.to-do {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  overflow-x: auto;
+  height: 75vh; /*높이 설정을 해줘야 overflow 적용 가능*/
+  margin: 5px;
 }
 
 .to-do__item {
