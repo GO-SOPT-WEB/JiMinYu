@@ -10,7 +10,7 @@ header {
   position: sticky;
   top: 0;
   padding: 20px 15px;
-  width: 100%;
+  width: 100vw;
   font-weight: bold;
   font-size: 40px;
   /* block인 경우에는 width 100 설정이 불필요한 것 같긴 한데,, */
@@ -36,6 +36,7 @@ nav {
   border-radius: 20px; /*radius 설정할 때 왜 px 설정이 %보다 더 자연스러운지 차이 찾아보기*/
   margin-top: 18px;
   margin-left: 10px;
+  margin-right: 10px;
   padding: 8px 10px;
   position: sticky; /*nav 스티키 적용이 안 되고 있는 것 같습니다,, 카드 아이템들이랑 같이 스크롤 되는 문제 미해결*/
   background-color: lightgreen;
@@ -77,6 +78,7 @@ nav a {
 }
 
 .card-item {
+  padding: 0px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,13 +114,14 @@ nav a {
 }
 
 .card-item__image {
+  margin-top: 10px;
   width: 150px;
   height: 150px;
 }
 
 .card-item__like {
   width: 20px;
-  height: 20px;
+  margin-right: 5px;
   border: none;
   background-color: white;
 }
