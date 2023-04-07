@@ -98,9 +98,24 @@ header > h1 {
   font-size: 23px;
   padding: 10px;
   font-weight: bold;
+  color: lemonchiffon;
+  border-radius: 15px;
+}
 /* nth-child 써서 배경색 다르게 적용하고 싶은데 잘못 쓰고 있는지 이상해져서 하나씩 적용했다,, */
+#to-do__first {
+  background-color: skyblue;
+}
+
+#to-do__second {
+  background-color: coral;
+}
+
+#to-do__third {
+  background-color: gold;
+}
+
+#to-do__fourth {
   background-color: plum;
-  border-radius: 10px;
 }
 
 .to-do__item__title__button {
