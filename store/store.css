@@ -123,8 +123,6 @@ nav a {
 }
 
 .card-item__like {
-  width: 20px;
+  align-self: flex-end;
   margin-right: 5px;
-  border: none;
-  background-color: white;
 }
