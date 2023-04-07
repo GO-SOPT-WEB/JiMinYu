@@ -25,6 +25,11 @@ body {
   background-color: lemonchiffon;
 }
 
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav {
   width: 14vw;
   border-radius: 20px; /*radius 설정할 때 왜 px 설정이 %보다 더 자연스러운지 차이 찾아보기*/
