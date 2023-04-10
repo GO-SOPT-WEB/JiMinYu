@@ -44,7 +44,7 @@ nav {
   padding: 8px 10px;
   position: sticky;
   background-color: var(--color-nav);
-  color: var(--color-header-title);
+  color: var(--color-nav-title);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,6 +61,10 @@ nav ul {
   display: inline-block;
   list-style-type: none;
   padding: 0px;
+}
+
+nav ul > li::before {
+  content: "🤎";
 }
 
 nav li {
