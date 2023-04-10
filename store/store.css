@@ -96,6 +96,10 @@ nav a {
   margin-top: 0px;
 }
 
+.card-item ul > li::before {
+  content: "# ";
+}
+
 .hashtag-list {
   font-size: 13px;
   display: flex;
