@@ -105,9 +105,6 @@ nav a {
 
   background-color: var(--color-card-background);
   border-radius: 2rem;
-
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .card-item > h3 {
@@ -122,6 +119,9 @@ nav a {
   justify-content: center;
 
   width: 95%;
+  height: 1rem;
+  flex-wrap: wrap;
+  overflow: hidden;
 
   color: var(--color-hashtag);
   font-size: 1rem;
@@ -129,6 +129,12 @@ nav a {
 
 .card-item ul > li::before {
   content: "#";
+}
+
+.card-item ul > li {
+  width: 3rem;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .card-item > img {
