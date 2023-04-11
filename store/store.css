@@ -118,7 +118,7 @@ nav a {
 .card-item > ul {
   display: flex;
   margin-top: 0.7rem;
-  justify-content: space-between;
+  justify-content: center;
 
   column-gap: 0.5rem;
 
