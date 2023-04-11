@@ -21,6 +21,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
+  left: 0;
 
   width: 100vw;
   height: 6.5rem;
@@ -34,7 +35,10 @@ header {
 
   z-index: 1;
 }
-
+header > h1 {
+  position: relative;
+  left: 1rem;
+}
 main {
   display: flex;
   justify-content: space-between;
@@ -53,7 +57,7 @@ nav {
   padding: 0.6rem;
   margin-top: 0.7rem;
 
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-color: var(--color-nav);
 
   color: var(--color-nav-title);
@@ -61,10 +65,13 @@ nav {
 }
 
 nav > h2 {
-  margin: 0px;
-  padding: 0px;
+  position: relative;
+  left: 0.7rem;
+  top: 0.2rem;
+
   font-weight: bold;
   color: var(--color-nav-title);
+  font-size: large;
 }
 
 nav ul {
@@ -110,7 +117,6 @@ nav a {
 .card-item > h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 0.2rem;
 }
 
 .card-item > ul {
@@ -148,5 +154,5 @@ nav a {
   bottom: 6%;
   right: 10%;
 
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
