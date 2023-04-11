@@ -17,16 +17,22 @@ body {
 
 header {
   display: flex;
-  position: sticky;
-  top: 0;
-  padding: 20px 15px;
-  width: 100vw;
-  font-weight: bold;
-  font-size: 40px;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+
+  width: 100vw;
+  height: 6.5rem;
+  padding-left: 2rem;
+
   background-color: var(--color-header);
   color: var(--color-header-title);
+
+  font-weight: bold;
+  font-size: 2.3rem;
+
+  z-index: 1;
 }
 
 main {
@@ -35,36 +41,35 @@ main {
 }
 
 nav {
-  width: 18vw;
-  height: 25vh;
-  border-radius: 20px;
-  margin-top: 18px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 8px 10px;
-  position: sticky;
-  background-color: var(--color-nav);
-  color: var(--color-nav-title);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: sticky;
+  top: 0.7rem;
+  left: 0.7rem;
+
+  width: 20vw;
+  height: 12rem;
+  padding: 0.6rem;
+  margin-top: 0.7rem;
+
+  border-radius: 2rem;
+  background-color: var(--color-nav);
+
+  color: var(--color-nav-title);
+  white-space: nowrap;
 }
 
 nav > h2 {
-  margin: 0dp;
-  padding: 0dp;
+  margin: 0px;
+  padding: 0px;
   font-weight: bold;
   color: var(--color-nav-title);
 }
 
 nav ul {
   display: inline-block;
-  list-style-type: none;
   padding: 0px;
-}
-
-nav ul > li::before {
-  content: "🤎";
 }
 
 nav li {
@@ -83,52 +88,58 @@ nav a {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
+  position: relative;
+  left: 1rem;
 }
 
 .card-item {
-  padding: 0px 10px;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 14vw;
-  height: 35vh;
+
+  width: 12.5vw;
+  height: 18rem;
+  margin: 0.5rem;
+
   background-color: var(--color-card-background);
-  border-radius: 10px;
-  margin: 5px;
+  border-radius: 2rem;
+
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .card-item > h3 {
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 0px;
+}
+
+.card-item > ul {
+  display: flex;
+  margin-top: 0.7rem;
+  justify-content: space-between;
+
+  column-gap: 0.5rem;
+
+  color: var(--color-hashtag);
+  font-size: 1rem;
 }
 
 .card-item ul > li::before {
-  content: "# ";
+  content: "#";
 }
 
-.hashtag-list {
-  font-size: 13px;
-  display: flex;
-  color: var(--color-hashtag);
-  margin-top: 5px;
-  justify-content: space-between;
+.card-item > img {
+  width: 75%;
+  height: 48%;
+  margin: 1.6rem 0;
 }
 
-.hashtag {
-  margin-right: 5px;
-}
+.card-item > footer {
+  position: absolute;
+  bottom: 6%;
+  right: 10%;
 
-.card-item__image {
-  margin-top: 10px;
-  width: 150px;
-  height: 150px;
-}
-
-.card-item__like {
-  align-self: flex-end;
-  margin-right: 5px;
+  font-size: 1.5rem;
 }
