@@ -86,7 +86,7 @@ nav a {
 
 .card-section {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
   top: 0.7rem;
