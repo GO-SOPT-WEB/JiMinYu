@@ -45,7 +45,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   position: sticky;
-  top: 0.7rem;
+  top: 7.2rem;
   left: 0.7rem;
 
   width: 20vw;
@@ -89,7 +89,7 @@ nav a {
   justify-content: left;
   flex-wrap: wrap;
   position: relative;
-  left: 1rem;
+  top: 0.7rem;
 }
 
 .card-item {
@@ -113,6 +113,7 @@ nav a {
 .card-item > h3 {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 0.2rem;
 }
 
 .card-item > ul {
@@ -120,7 +121,7 @@ nav a {
   margin-top: 0.7rem;
   justify-content: center;
 
-  column-gap: 0.5rem;
+  width: 95%;
 
   color: var(--color-hashtag);
   font-size: 1rem;
