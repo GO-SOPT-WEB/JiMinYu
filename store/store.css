@@ -151,6 +151,7 @@ nav a {
 
   background-color: var(--color-card-background);
   border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.17rem 0.2rem var(--color-nav);
 }
 
 .card-item > h3 {
