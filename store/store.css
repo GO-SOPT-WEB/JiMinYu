@@ -228,4 +228,7 @@ nav a {
   nav {
     display: none;
   }
+  .card-section {
+    justify-content: center;
+  }
 }
