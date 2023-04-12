@@ -1,4 +1,5 @@
 @import "reset.css";
+
 :root {
   --color-header: #fcf9be;
   --color-background: #e8f3d6;
@@ -19,25 +20,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 
   width: 100vw;
   height: 6.5rem;
-  padding-left: 2rem;
+  padding: 0 2rem;
 
   background-color: var(--color-header);
   color: var(--color-header-title);
 
-  font-weight: bold;
   font-size: 2.3rem;
+  font-weight: bold;
+
 
   z-index: 1;
 }
-header > h1 {
-  position: relative;
-  left: 1rem;
+
+.header-sidebar-article > h2 {
+  margin-bottom: 3rem;
+}
+
+.header-sidebar-article div {
+  margin-bottom: 1rem;
 }
 main {
   display: flex;
@@ -93,10 +100,12 @@ nav a {
 
 .card-section {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
   position: relative;
-  top: 0.7rem;
+  top: 7.2rem;
+
+  margin: 2rem;
 }
 
 .card-item {
@@ -106,7 +115,7 @@ nav a {
   justify-content: center;
   align-items: center;
 
-  width: 12.5vw;
+  width: 13vw;
   height: 18rem;
   margin: 0.5rem;
 
