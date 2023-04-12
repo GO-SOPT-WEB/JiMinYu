@@ -35,6 +35,31 @@ header {
   font-size: 2.3rem;
   font-weight: bold;
 
+  z-index: 2;
+}
+
+header > i {
+  cursor: pointer;
+}
+
+.header-sidebar {
+  display: none;
+}
+
+header > i:hover + header > section {
+  display: block;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 13rem;
+  height: 100vh;
+  padding: 2rem;
+
+  font-size: 1.7rem;
+  color: var(--color-nav-title);
+  background-color: var(--color-nav);
 
   z-index: 1;
 }
