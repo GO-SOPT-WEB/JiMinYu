@@ -71,6 +71,11 @@ header > i:hover + header > section {
 .header-sidebar-article div {
   margin-bottom: 1rem;
 }
+
+.header-sidebar-article div:hover {
+  color: var(--color-header-title);
+}
+
 main {
   display: flex;
   justify-content: space-between;
