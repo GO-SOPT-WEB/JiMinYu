@@ -156,3 +156,33 @@ nav a {
 
   font-size: 1.4rem;
 }
+
+@media screen and (max-width: 1199px) {
+  .card-item {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card-item {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-item {
+    width: 26vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-item {
+    width: 38vw;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card-item {
+    width: 80vw;
+  }
+  nav {
+    display: none;
+  }
+}
