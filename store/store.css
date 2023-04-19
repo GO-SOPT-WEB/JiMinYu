@@ -1,13 +1,13 @@
 @import "reset.css";
 
 :root {
-  --color-header: #fcf9be;
-  --color-background: #e8f3d6;
-  --color-nav: #ffdca9;
-  --color-header-title: #ff9494;
-  --color-nav-title: #3c2a21;
-  --color-card-background: #ffffff;
-  --color-hashtag: #3c2a21;
+	--color-header: #fcf9be;
+	--color-background: #e8f3d6;
+	--color-nav: #ffdca9;
+	--color-header-title: #ff9494;
+	--color-nav-title: #3c2a21;
+	--color-card-background: #ffffff;
+	--color-hashtag: #3c2a21;
 }
 
 body {
