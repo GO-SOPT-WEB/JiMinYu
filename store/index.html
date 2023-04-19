@@ -1,225 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="store.css" />
-    <script
-      src="https://kit.fontawesome.com/6d5791e2cf.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Jimin's Fruit Store</title>
-  </head>
-  <body>
-    <header>
-      <h1>🍓JIMIN'S FRUIT STORE🍋</h1>
-      <i class="fa-solid fa-bars"></i>
-      <section class="header-sidebar">
-        <article class="header-sidebar-article">
-          <h2>메뉴</h2>
-          <div><a href="#">새 상품 추가</a></div>
-          <div><a href="#">찜 목록</a></div>
-        </article>
-      </section>
-    </header>
-    <main>
-      <nav>
-        <h2>종류</h2>
-        <ul>
-          <label
-            ><li><input type="checkbox" /> 전체 😋</li></label
-          >
-          <label
-            ><li><input type="checkbox" /> 봄 🌸</li></label
-          >
-          <label
-            ><li><input type="checkbox" /> 여름 🌻</li></label
-          >
-          <label
-            ><li><input type="checkbox" /> 가을 🍁</li></label
-          >
-        </ul>
-      </nav>
-      <section class="card-section">
-        <article class="card-item">
-          <h3>사과</h3>
-          <ul class="hashtag-list">
-            <li>가을</li>
-            <li>빨강</li>
-            <li>상큼</li>
-            <li>상큼</li>
-            <li>상큼</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/apple.png"
-            alt="사과 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>블루베리</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">가을</li>
-            <li class="hashtag">보라</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/blueberry.png"
-            alt="블루베리 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>체리</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">가을</li>
-            <li class="hashtag">빨강</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/cherry.png"
-            alt="체리 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>포도</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">여름</li>
-            <li class="hashtag">보라</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/grape.png"
-            alt="포도 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>망고</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">여름</li>
-            <li class="hashtag">노랑</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/mango.png"
-            alt="망고 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>멜론</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">여름</li>
-            <li class="hashtag">초록</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images//melon.png"
-            alt="멜론 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>복숭아</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">여름</li>
-            <li class="hashtag">분홍</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/peach.png"
-            alt="복숭아 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>감</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">가을</li>
-            <li class="hashtag">주황</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/persimmon.png"
-            alt="감 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>배</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">가을</li>
-            <li class="hashtag">노랑</li>
-            <li class="hashtag">상큼</li>
-          </ul>
-          <img class="card-item__image" src="./images/pear.png" alt="배 사진" />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>자두</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">여름</li>
-            <li class="hashtag">빨강</li>
-            <li class="hashtag">상큼</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/plum.png"
-            alt="자두 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>딸기</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">겨울</li>
-            <li class="hashtag">빨강</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/strawberry.png"
-            alt="딸기 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-
-        <article class="card-item">
-          <h3>수박</h3>
-          <ul class="hashtag-list">
-            <li class="hashtag">여름</li>
-            <li class="hashtag">빨강</li>
-            <li class="hashtag">달달</li>
-          </ul>
-          <img
-            class="card-item__image"
-            src="./images/watermelon.png"
-            alt="수박 사진"
-          />
-          <footer class="card-item__like">🤍</footer>
-        </article>
-      </section>
-    </main>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="store.css" />
+		<script
+			src="https://kit.fontawesome.com/6d5791e2cf.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Jimin's Fruit Store</title>
+	</head>
+	<body>
+		<header>
+			<h1>🍓JIMIN'S FRUIT STORE🍋</h1>
+			<i class="fa-solid fa-bars"></i>
+			<section class="header-sidebar">
+				<article class="header-sidebar-article">
+					<h2>메뉴</h2>
+					<div><a href="#">새 상품 추가</a></div>
+					<div><a href="#">찜 목록</a></div>
+				</article>
+			</section>
+		</header>
+		<main>
+			<nav>
+				<h2>종류</h2>
+				<ul>
+					<label
+						><li><input type="checkbox" /> 전체 😋</li></label
+					>
+					<label
+						><li><input type="checkbox" /> 봄 🌸</li></label
+					>
+					<label
+						><li><input type="checkbox" /> 여름 🌻</li></label
+					>
+					<label
+						><li><input type="checkbox" /> 가을 🍁</li></label
+					>
+				</ul>
+			</nav>
+			<section class="card-section"></section>
+		</main>
+		<script src="store.js"></script>
+	</body>
 </html>
