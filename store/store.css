@@ -1,28 +1,38 @@
 @import "reset.css";
+:root {
+  --color-header: #fcf9be;
+  --color-background: #e8f3d6;
+  --color-nav: #ffdca9;
+  --color-header-title: #ff9494;
+  --color-nav-title: #3c2a21;
+  --color-card-background: #ffffff;
+  --color-hashtag: #3c2a21;
+}
 
 body {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--color-background);
 }
 
 header {
-	display: flex;
-	position: sticky;
-	top: 0;
-	padding: 20px 15px;
-	width: 100%;
-	font-weight: bold;
-	font-size: 40px;
-	/* block인 경우에는 width 100 설정이 불필요한 것 같긴 한데,, */
-	/*왜 align-items 없이 패딩만 주면 햄버거바가 탈출하는가??*/
-	justify-content: space-between;
-	align-items: center;
-	background-color: lightgreen;
-	color: brown;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
 
-body {
-	background-color: lemonchiffon;
+  width: 100vw;
+  height: 6.5rem;
+  padding-left: 2rem;
+
+  background-color: var(--color-header);
+  color: var(--color-header-title);
+
+  font-weight: bold;
+  font-size: 2.3rem;
+
+  z-index: 1;
 }
 
 main {
@@ -31,38 +41,42 @@ main {
 }
 
 nav {
-	width: 18vw;
-	height: 25vh;
-	border-radius: 20px; /*radius 설정할 때 왜 px 설정이 %보다 더 자연스러운지 차이 찾아보기*/
-	margin-top: 18px;
-	margin-left: 10px;
-	padding: 8px 10px;
-	position: sticky; /*nav 스티키 적용이 안 되고 있는 것 같습니다,, 카드 아이템들이랑 같이 스크롤 되는 문제 미해결*/
-	background-color: lightgreen;
-	color: brown;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 7.2rem;
+  left: 0.7rem;
+
+  width: 20vw;
+  height: 12rem;
+  padding: 0.6rem;
+  margin-top: 0.7rem;
+
+  border-radius: 2rem;
+  background-color: var(--color-nav);
+
+  color: var(--color-nav-title);
+  white-space: nowrap;
 }
 
 nav > h2 {
-	margin: 0dp;
-	padding: 0dp;
-	font-weight: bold;
-	color: black;
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  color: var(--color-nav-title);
 }
 
 nav ul {
-	display: inline-block;
-	list-style-type: none; /*리스트 점 없애주기*/
-	padding: 0px;
+  display: inline-block;
+  padding: 0px;
 }
 
 nav li {
-	background-color: white;
-	border-radius: 10px;
-	margin: 10px 0px;
-	padding: 7px 5px;
+  background-color: var(--color-card-background);
+  border-radius: 10px;
+  margin: 10px 0px;
+  padding: 7px 5px;
 }
 
 nav a {
@@ -71,51 +85,68 @@ nav a {
 }
 
 .card-section {
-	display: flex;
-	justify-content: left;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0.7rem;
 }
 
 .card-item {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 14vw;
-	height: 35vh;
-	background-color: white;
-	border-radius: 10px;
-	margin: 5px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 12.5vw;
+  height: 18rem;
+  margin: 0.5rem;
+
+  background-color: var(--color-card-background);
+  border-radius: 2rem;
 }
 
-.card-item__name {
-	/* 이 이름이 항상 카드 위쪽에 붙어 있게 하고 싶다*/
-	font-size: 20px;
-	font-weight: bold;
-	margin-top: 0px;
+.card-item > h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
 }
 
-.hashtag-list {
-	font-size: 13px;
-	display: flex;
-	/* font-weight: bold; */
-	color: gray;
-	margin-top: 5px;
-	justify-content: space-between;
+.card-item > ul {
+  display: flex;
+  margin-top: 0.7rem;
+  justify-content: center;
+
+  width: 95%;
+  height: 1rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  color: var(--color-hashtag);
+  font-size: 1rem;
 }
 
-.hashtag {
-	margin-right: 5px;
+.card-item ul > li::before {
+  content: "#";
 }
 
-.card-item__image {
-	width: 150px;
-	height: 150px;
+.card-item ul > li {
+  width: 3rem;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.card-item__like {
-	width: 20px;
-	height: 20px;
-	border: none;
-	background-color: white;
+.card-item > img {
+  width: 75%;
+  height: 48%;
+  margin: 1.6rem 0;
+}
+
+.card-item > footer {
+  position: absolute;
+  bottom: 6%;
+  right: 10%;
+
+  font-size: 1.5rem;
 }
