@@ -90,11 +90,10 @@ todoAddBtn.forEach((item) => item.addEventListener("click", createModal));
 
 // 모달 띄워주는 함수
 function createModal() {
-	console.log("Modal created");
 	const modalDiv = document.createElement("div");
 	modalDiv.classList.add("modal");
 	main.appendChild(modalDiv);
-
+	console.log("Modal created");
 	const addToDoContent = document.createElement("input");
 	const addTodoBtn = document.createElement("button");
 	modalDiv.append(addToDoContent, addTodoBtn);
@@ -108,5 +107,4 @@ function createModal() {
 
 function closeModal(modalDiv) {
 	modalDiv.style.display = "none";
-	modalDiv.remove();
 }

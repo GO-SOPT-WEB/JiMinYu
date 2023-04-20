@@ -146,14 +146,15 @@ header > h1 {
 .modal {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 	position: fixed;
 	padding: 2rem;
 
-	top: 10rem;
-	left: 10rem;
+	top: 20%;
+	left: 20%;
 
-	width: 8rem;
+	width: 10rem;
 	height: 5rem;
 
 	background-color: pink;
@@ -161,12 +162,26 @@ header > h1 {
 
 	display: none;
 
-	font-size: 1.5rem;
+	font-size: 3rem;
 	font-weight: bold;
 
 	z-index: 1;
 }
 
+.modal > input {
+	width: 9rem;
+	height: 2rem;
+	margin: 0;
+	padding: 0;
+}
+
+.modal > button {
+	border: black;
+	background-color: lemonchiffon;
+	margin: 0;
+	font-size: 1rem;
+	font-weight: bold;
+}
 /* 밑에 버튼 두 개 */
 .footer {
 	display: flex;
