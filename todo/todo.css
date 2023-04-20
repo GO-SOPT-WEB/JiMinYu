@@ -96,12 +96,23 @@ header > h1 {
 }
 
 .to-do__item > h3 {
+	border-radius: 15px;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+}
+
+.to-do__item > h3 > img {
+	margin-right: 0.7rem;
+}
+
+.to-do__item > h3 > p {
+	display: inline-block;
 	width: fit-content;
 	font-size: 23px;
 	padding: 10px;
 	font-weight: bold;
 	color: lemonchiffon;
-	border-radius: 15px;
 }
 
 .to-do__item:nth-of-type(1) h3 {
