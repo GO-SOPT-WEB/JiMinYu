@@ -69,7 +69,7 @@ header > h1 {
 	color: white;
 }
 
-.weekly-section__item__date {
+.weekly-section__item > p {
 	display: inline-block;
 	margin-top: 10px;
 }
