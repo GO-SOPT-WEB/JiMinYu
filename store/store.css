@@ -36,8 +36,8 @@ header {
 }
 
 main {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 nav {
@@ -80,8 +80,8 @@ nav li {
 }
 
 nav a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 .card-section {

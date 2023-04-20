@@ -1,0 +1,153 @@
+@import "reset.css";
+
+/* 화면 비율 설정 */
+@media (min-width: 768px) {
+	body {
+		width: 412px;
+		height: 100vh;
+		margin: 0 auto;
+	}
+}
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background-color: lemonchiffon;
+}
+
+header {
+	position: sticky;
+	background-color: lemonchiffon;
+	top: 0;
+	padding: 20px 15px;
+	width: 100%;
+	font-weight: bold;
+	font-size: 50px;
+	color: coral;
+	z-index: 1;
+}
+
+header > h1 {
+	text-align: center;
+}
+
+/* 달력 부분 */
+.weekly-section {
+	display: grid;
+	width: 412px;
+	/*그리드 가로 자꾸 스크롤 되면서 길어져서 일단 고정값 부여*/
+	height: 30vh;
+	grid-template-columns: repeat(7, 1fr);
+	row-gap: 10px;
+	column-gap: 10px;
+	justify-items: center;
+	align-items: center;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 0px px;
+	margin: 5px;
+	text-align: center;
+
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.weekly-section__item > div {
+	position: relative;
+	margin-top: 30px;
+}
+.weekly-section__item > div > img {
+	width: 30px;
+	height: 30px;
+}
+
+/* 하트랑 글자 겹쳐주기 */
+.weekly-section__item > div > p {
+	position: absolute;
+	top: 22%;
+	left: 30%;
+	font-size: 18px;
+	color: white;
+}
+
+.weekly-section__item__date {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/* 투두리스트 부분 */
+.to-do {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow-x: auto;
+	height: 75vh; /*높이 설정을 해줘야 overflow 적용 가능*/
+	margin: 5px;
+}
+
+.to-do__item {
+	margin: 20px;
+}
+
+.to-do__item > h3 {
+	width: fit-content;
+	font-size: 23px;
+	padding: 10px;
+	font-weight: bold;
+	color: lemonchiffon;
+	border-radius: 15px;
+}
+
+.to-do__item:nth-of-type(1) h3 {
+	background-color: skyblue;
+}
+
+.to-do__item:nth-of-type(2) h3 {
+	background-color: coral;
+}
+
+.to-do__item:nth-of-type(3) h3 {
+	background-color: gold;
+}
+
+.to-do__item:nth-of-type(4) h3 {
+	background-color: plum;
+}
+
+.to-do__item__title__button {
+	width: 22px;
+	height: 22px;
+	margin-left: 5px;
+}
+
+.to-do__item__list__detail {
+	font-size: 18px;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 10px;
+	margin: 10px 0px;
+}
+
+/* 밑에 버튼 두 개 */
+.footer {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.footer img {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.footer__items__calendar,
+.footer__items__my {
+	background-color: pink;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 15px;
+	border-radius: 10px;
+	font-weight: bold;
+}
