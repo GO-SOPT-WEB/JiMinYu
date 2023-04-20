@@ -31,6 +31,7 @@ days.forEach((days, index) => {
 todoItems.forEach((item) => {
 	createTodos(item.title, item.contents);
 });
+
 function createCalendar(days, index) {
 	const weeklyItem = document.createElement("article");
 	weeklySection.appendChild(weeklyItem);
@@ -89,6 +90,7 @@ todoAddBtn.forEach((item) => item.addEventListener("click", createModal));
 
 // 모달 띄워주는 함수
 function createModal() {
+	console.log("Modal created");
 	const modalDiv = document.createElement("div");
 	modalDiv.classList.add("modal");
 	main.appendChild(modalDiv);
@@ -100,7 +102,11 @@ function createModal() {
 
 	// 모달 닫기 버튼 활성화
 	addTodoBtn.addEventListener("click", closeModal(modalDiv));
+
+	modalDiv.style.display = "block";
 }
+
 function closeModal(modalDiv) {
+	modalDiv.style.display = "none";
 	modalDiv.remove();
 }
