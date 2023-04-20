@@ -17,4 +17,4 @@ const todoItems = [
 	},
 ];
 
-export { todoItems };
+export default todoItems;
