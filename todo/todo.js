@@ -75,3 +75,10 @@ function createTodos(title, contents) {
 	});
 	todoItem.append(todoItemTitle, todoItemList);
 }
+
+// 할일 목록 추가하는 함수
+function createTodoContents(todo) {
+	const todoContent = document.createElement("li");
+	todoContent.insertAdjacentHTML("afterbegin", `<button>🤍</button>${todo}`);
+	return todoContent;
+}
