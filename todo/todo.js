@@ -82,3 +82,25 @@ function createTodoContents(todo) {
 	todoContent.insertAdjacentHTML("afterbegin", `<button>🤍</button>${todo}`);
 	return todoContent;
 }
+
+// 추가 버튼 눌렀을 때 모달 띄워주기
+const todoAddBtn = document.querySelectorAll(".to-do__item > h3 > img");
+todoAddBtn.forEach((item) => item.addEventListener("click", createModal));
+
+// 모달 띄워주는 함수
+function createModal() {
+	const modalDiv = document.createElement("div");
+	modalDiv.classList.add("modal");
+	main.appendChild(modalDiv);
+
+	const addToDoContent = document.createElement("input");
+	const addTodoBtn = document.createElement("button");
+	modalDiv.append(addToDoContent, addTodoBtn);
+	addTodoBtn.textContent = "추가";
+
+	// 모달 닫기 버튼 활성화
+	addTodoBtn.addEventListener("click", closeModal(modalDiv));
+}
+function closeModal(modalDiv) {
+	modalDiv.remove();
+}
