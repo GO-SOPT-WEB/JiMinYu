@@ -120,18 +120,36 @@ header > h1 {
 	background-color: plum;
 }
 
-.to-do__item__title__button {
+.to-do__item > h3 > img {
 	width: 22px;
 	height: 22px;
 	margin-left: 5px;
 }
 
-.to-do__item__list__detail {
+.to-do__item > ul {
 	font-size: 18px;
 	padding: 5px;
 	font-weight: bold;
 	border-radius: 10px;
 	margin: 10px 0px;
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	padding: 2rem;
+
+	display: block;
+
+	background-color: pink;
+	border-radius: 1rem;
+
+	font-size: 1.5rem;
+	font-weight: bold;
+
+	z-index: 1;
 }
 
 /* 밑에 버튼 두 개 */
