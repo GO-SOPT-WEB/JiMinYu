@@ -108,3 +108,9 @@ function createModal() {
 function closeModal(modalDiv) {
 	modalDiv.style.display = "none";
 }
+
+//하트 안에 숫자 띄워주는 함수
+
+//미완료한 애들 계산하는 함수
+
+//버튼 클릭하면 색깔 바뀌면서 완료 처리 되어야 함!

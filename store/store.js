@@ -74,7 +74,7 @@ clickedLists.classList.add("clicked-section");
 main.appendChild(clickedLists);
 main.insertBefore(clickedLists, cardSection);
 
-//좌측 해시태그 카테고리 누르면 해당 태그에 맞는 애들 필터링 해서 보여주기
+//좌측 해시태그 카테고리 누르면 해당 태그들 위에 띄워주기
 navCheckboxes.forEach((checkbox) => {
 	checkbox.addEventListener("click", filterHashtag);
 });
@@ -173,5 +173,4 @@ cardItems.forEach((item) => {
 });
 
 // 선택한 카테고리에 맞는 애들 필터링
-
 function showSortedItems() {}
