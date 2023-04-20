@@ -53,3 +53,25 @@ function createCalendar(days, index) {
 	weeklyItem.append(weeklyDay, weeklyImgDiv, weeklyNum);
 	weeklyImgDiv.append(weeklyImg, weeklyImgNum);
 }
+
+function createTodos(title, contents) {
+	// 투두 하나 담을 공간 만들어주기
+	const todoItem = document.createElement("article");
+	todoSection.appendChild(todoItem);
+	todoItem.classList.add("to-do__item");
+	// 투두 제목 넣어주고 추가 버튼 생성하기
+	const todoItemTitle = document.createElement("h3");
+	todoItemTitle.innerHTML = `<p>${title}</p>`;
+	const todoAddBtn = document.createElement("img");
+	todoAddBtn.src = "./images/plus.png";
+	todoAddBtn.alt = "추가-버튼";
+	todoItemTitle.appendChild(todoAddBtn);
+
+	// 할일 목록 만들어주기
+	const todoItemList = document.createElement("ul");
+	contents.forEach((todo) => {
+		const todoContent = createTodoContents(todo);
+		todoItemList.appendChild(todoContent);
+	});
+	todoItem.append(todoItemTitle, todoItemList);
+}
