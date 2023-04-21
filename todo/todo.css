@@ -49,8 +49,9 @@ header > h1 {
 	justify-items: center;
 	align-items: center;
 	background-color: #ffffff;
+
 	border-radius: 10px;
-	padding: 0px px;
+	padding: 0px;
 	margin: 5px;
 	text-align: center;
 
@@ -58,13 +59,17 @@ header > h1 {
 	font-weight: bold;
 }
 
+/* 캘린더에 하나만 색깔 다르게 설정하기 실패 */
+.weekly-section__item:nth-child(5) > div > img {
+	src: url("./images/yellow-heart.png");
+}
 .weekly-section__item > div {
 	position: relative;
 	margin-top: 30px;
 }
 .weekly-section__item > div > img {
-	width: 30px;
-	height: 30px;
+	width: 32px;
+	height: 32px;
 }
 
 /* 하트랑 글자 겹쳐주기 */
@@ -72,7 +77,7 @@ header > h1 {
 	position: absolute;
 	top: 22%;
 	left: 30%;
-	font-size: 18px;
+	font-size: 16px;
 	color: white;
 }
 
