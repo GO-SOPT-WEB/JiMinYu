@@ -32,6 +32,8 @@ todoItems.forEach((item) => {
 	createTodos(item.title, item.contents);
 });
 
+calcUndone();
+
 function createCalendar(days, index) {
 	const weeklyItem = document.createElement("article");
 	weeklySection.appendChild(weeklyItem);
@@ -62,7 +64,7 @@ function createTodos(title, contents) {
 	todoItem.classList.add("to-do__item");
 	// 투두 제목 넣어주고 추가 버튼 생성하기
 	const todoItemTitle = document.createElement("h3");
-	todoItemTitle.innerHTML = `<p>${title}</p>`;
+	todoItemTitle.insertAdjacentHTML("afterbegin", `<p>${title}</p>`);
 	const todoAddBtn = document.createElement("img");
 	todoAddBtn.src = "./images/plus.png";
 	todoAddBtn.alt = "추가-버튼";
@@ -80,37 +82,76 @@ function createTodos(title, contents) {
 // 할일 목록 추가하는 함수
 function createTodoContents(todo) {
 	const todoContent = document.createElement("li");
-	todoContent.insertAdjacentHTML("afterbegin", `<button>🤍</button>${todo}`);
+	todoContent.insertAdjacentHTML(
+		"afterbegin",
+		`<button id="undone">🤍</button>${todo}`
+	);
+
+	//버튼 클릭하면 완료 상태 변경되도록 설정
+	const doneButton = todoContent.querySelector("#undone, #done");
+	doneButton.addEventListener("click", clickDoneButton);
 	return todoContent;
 }
 
 // 추가 버튼 눌렀을 때 모달 띄워주기
 const todoAddBtn = document.querySelectorAll(".to-do__item > h3 > img");
-todoAddBtn.forEach((item) => item.addEventListener("click", createModal));
+todoAddBtn.forEach((item) =>
+	item.addEventListener("click", () => {
+		const clickedArticle = item.closest("article");
+
+		createModal(clickedArticle);
+	})
+);
 
 // 모달 띄워주는 함수
-function createModal() {
+function createModal(clickedArticle) {
 	const modalDiv = document.createElement("div");
 	modalDiv.classList.add("modal");
 	main.appendChild(modalDiv);
-	console.log("Modal created");
+
+	//입력창이랑 버튼 생성
 	const addToDoContent = document.createElement("input");
+	addToDoContent.type = "textarea";
 	const addTodoBtn = document.createElement("button");
 	modalDiv.append(addToDoContent, addTodoBtn);
 	addTodoBtn.textContent = "추가";
-
-	// 모달 닫기 버튼 활성화
-	addTodoBtn.addEventListener("click", closeModal(modalDiv));
-
 	modalDiv.style.display = "block";
+
+	//버튼 누르면 입력값 추가하고 모달 닫기
+	addTodoBtn.addEventListener("click", () => {
+		const addInputValue = addToDoContent.value;
+		if (addInputValue) {
+			const newTodoContent = createTodoContents(addInputValue);
+			clickedArticle.querySelector("ul").appendChild(newTodoContent);
+			//모달 닫기
+			closeModal(modalDiv);
+			//추가하면 바로 숫자 업데이트 되도록 수정
+			calcUndone();
+		}
+	});
 }
 
 function closeModal(modalDiv) {
-	modalDiv.style.display = "none";
+	modalDiv.remove();
 }
 
-//하트 안에 숫자 띄워주는 함수
+function clickDoneButton(event) {
+	const clickedButton = event.target;
+	if (clickedButton.getAttribute("id") === "undone") {
+		clickedButton.setAttribute("id", "done");
+		clickedButton.innerText = "💚";
+		calcUndone();
+	} else if (clickedButton.getAttribute("id") === "done") {
+		clickedButton.setAttribute("id", "undone");
+		clickedButton.innerText = "🤍";
+		calcUndone();
+	}
+}
 
 //미완료한 애들 계산하는 함수
-
-//버튼 클릭하면 색깔 바뀌면서 완료 처리 되어야 함!
+function calcUndone() {
+	const undoneNum = document.querySelectorAll("#undone").length;
+	//하트 안에 숫자 띄워주기!
+	const leftNum = main.querySelector(".weekly-section__item > div >p ");
+	leftNum.innerText = undoneNum;
+}
