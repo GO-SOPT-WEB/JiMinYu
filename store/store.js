@@ -4,6 +4,7 @@ const main = document.querySelector("main");
 const headerSidebar = document.querySelector(".header-sidebar");
 const navCheckboxes = document.querySelectorAll('nav input[type="checkbox"]');
 const cardSection = document.querySelector(".card-section");
+const cardItem = document.querySelector(".card-item");
 // const navItems = [" 전체 😋", " 봄 🌸", " 여름 🌻", " 가을 🍁"];
 // 나중에 카테고리도 자스로 바꾸기
 const cardItems = [
@@ -80,11 +81,9 @@ navCheckboxes.forEach((checkbox) => {
 });
 
 function filterHashtag() {
-	const clickedHashtags = document.querySelectorAll(".clicked-hashtag");
+	const clickedCheckboxes = document.querySelectorAll(".clicked-hashtag");
 
-	clickedHashtags.forEach((clickedHashtag) => {
-		clickedHashtag.remove();
-	});
+	clickedCheckboxes.forEach((clickedCheckBoxes) => clickedCheckBoxes.remove());
 
 	navCheckboxes.forEach((checkbox) => {
 		if (checkbox.checked) {
@@ -108,9 +107,21 @@ function filterHashtag() {
 				clickedHashtag.style.display = "none";
 				checkbox.checked = false;
 			}
+			// showSortedItems(clickedCheckboxes);
 		}
 	});
 }
+
+// // 선택한 카테고리에 맞는 애들 필터링
+// function showSortedItems(clickedCheckBoxes) {
+// 	clickedCheckBoxes.forEach((checkbox) => {
+// 		if ((checkbox.checked = true)) {
+// 			card.style.display = "flex";
+// 		} else {
+// 			card.style.display = "none";
+// 		}
+// 	});
+// }
 
 //카드 섹션에 상수 안에 있는 배열 순회하면서 카드 아이템 넣어주기
 cardItems.forEach((item) => {
@@ -127,6 +138,7 @@ cardItems.forEach((item) => {
 	item.hashtags.forEach((hashtag) => {
 		const hashtagItem = document.createElement("li");
 		hashtagItem.textContent = hashtag;
+		hashtagItem.setAttribute("id", `${hashtag}`);
 		hashtagList.appendChild(hashtagItem);
 	});
 	cardItem.appendChild(hashtagList);
@@ -154,6 +166,7 @@ cardItems.forEach((item) => {
 
 		function closeModal() {
 			modalDiv.style.display = "none";
+			modalDiv.remove();
 		}
 	}
 
@@ -171,6 +184,3 @@ cardItems.forEach((item) => {
 	//만든 카드 아이템 덩어리는 카드 섹션에 넣어주기
 	cardSection.appendChild(cardItem);
 });
-
-// 선택한 카테고리에 맞는 애들 필터링
-function showSortedItems() {}
