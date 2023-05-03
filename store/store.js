@@ -5,6 +5,7 @@ const headerSidebar = document.querySelector(".header-sidebar");
 const navCheckboxes = document.querySelectorAll('nav input[type="checkbox"]');
 const cardSection = document.querySelector(".card-section");
 const cardItem = document.querySelector(".card-item");
+
 // const navItems = [" 전체 😋", " 봄 🌸", " 여름 🌻", " 가을 🍁"];
 // 나중에 카테고리도 자스로 바꾸기
 const cardItems = [
