@@ -1,38 +1,87 @@
 @import "reset.css";
+
 :root {
-  --color-header: #fcf9be;
-  --color-background: #e8f3d6;
-  --color-nav: #ffdca9;
-  --color-header-title: #ff9494;
-  --color-nav-title: #3c2a21;
-  --color-card-background: #ffffff;
-  --color-hashtag: #3c2a21;
+	--color-header: #fcf9be;
+	--color-background: #e8f3d6;
+	--color-nav: #ffdca9;
+	--color-header-title: #ff9494;
+	--color-nav-title: #3c2a21;
+	--color-card-background: #ffffff;
+	--color-hashtag: #3c2a21;
+}
+
+* button {
+	border: 0;
+	outline: 0;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: var(--color-background);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background-color: var(--color-background);
+
+	display: flex;
+	flex-direction: column;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 
-  width: 100vw;
-  height: 6.5rem;
-  padding-left: 2rem;
+	width: 100vw;
+	height: 6.5rem;
+	padding: 0 2rem;
 
-  background-color: var(--color-header);
-  color: var(--color-header-title);
+	background-color: var(--color-header);
+	color: var(--color-header-title);
 
-  font-weight: bold;
-  font-size: 2.3rem;
+	font-size: 2.3rem;
+	font-weight: bold;
 
-  z-index: 1;
+	z-index: 2;
+}
+
+header > i {
+	cursor: pointer;
+}
+
+.header-sidebar {
+	display: none;
+}
+
+header > i:hover + header > section {
+	display: block;
+	text-align: left;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 13rem;
+	height: 100vh;
+	padding: 2rem;
+
+	font-size: 1.7rem;
+	color: var(--color-nav-title);
+	background-color: var(--color-nav);
+
+	z-index: 1;
+}
+
+.header-sidebar-article > h2 {
+	margin-bottom: 3rem;
+}
+
+.header-sidebar-article div {
+	margin-bottom: 1rem;
+}
+
+.header-sidebar-article div:hover {
+	color: var(--color-header-title);
 }
 
 main {
@@ -41,42 +90,45 @@ main {
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: sticky;
-  top: 7.2rem;
-  left: 0.7rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: sticky;
+	top: 7.2rem;
+	left: 0.7rem;
 
-  width: 20vw;
-  height: 12rem;
-  padding: 0.6rem;
-  margin-top: 0.7rem;
+	width: 20vw;
+	height: 12rem;
+	padding: 0.6rem;
+	margin-top: 0.7rem;
 
-  border-radius: 2rem;
-  background-color: var(--color-nav);
+	border-radius: 1rem;
+	background-color: var(--color-nav);
 
-  color: var(--color-nav-title);
-  white-space: nowrap;
+	color: var(--color-nav-title);
+	white-space: nowrap;
 }
 
 nav > h2 {
-  margin: 0px;
-  padding: 0px;
-  font-weight: bold;
-  color: var(--color-nav-title);
+	position: relative;
+	left: 0.7rem;
+	top: 0.2rem;
+
+	font-weight: bold;
+	color: var(--color-nav-title);
+	font-size: large;
 }
 
 nav ul {
-  display: inline-block;
-  padding: 0px;
+	display: inline-block;
+	padding: 0px;
 }
 
 nav li {
-  background-color: var(--color-card-background);
-  border-radius: 10px;
-  margin: 10px 0px;
-  padding: 7px 5px;
+	background-color: var(--color-card-background);
+	border-radius: 10px;
+	margin: 10px 0px;
+	padding: 7px 5px;
 }
 
 nav a {
@@ -84,69 +136,168 @@ nav a {
 	color: inherit;
 }
 
-.card-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  top: 0.7rem;
+.clicked-section {
+	display: flex;
+	justify-content: left;
+	height: 2rem;
+	position: fixed;
+
+	top: 7rem;
+	left: 6rem;
 }
 
+.card-section {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+	position: relative;
+	top: 7.2rem;
+
+	margin: 2rem;
+}
+
+.clicked-hashtag {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+	padding: 1rem;
+
+	height: fit-content;
+	width: fit-content;
+
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	background-color: var(--color-nav);
+}
+
+.clicked-hashtag > button {
+	box-sizing: content-box;
+	padding: 0;
+
+	border: 0;
+	outline: 0;
+}
+/* 버튼으로 만들어서 주석 처리함 */
+/* .clicked-hashtag > p::after {
+	content: "🆇";
+} */
+
 .card-item {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  width: 12.5vw;
-  height: 18rem;
-  margin: 0.5rem;
+	width: 13vw;
+	height: 18rem;
+	margin: 0.5rem;
 
-  background-color: var(--color-card-background);
-  border-radius: 2rem;
+	background-color: var(--color-card-background);
+	border-radius: 2rem;
+	box-shadow: 0.2rem 0.2rem 0.17rem 0.2rem var(--color-nav);
 }
 
 .card-item > h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.2rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.card-item > button {
+	box-sizing: content-box;
+	padding: 0;
+
+	border: 0;
+	outline: 0;
+	font-size: 1rem;
 }
 
 .card-item > ul {
-  display: flex;
-  margin-top: 0.7rem;
-  justify-content: center;
+	display: flex;
+	margin-top: 0.7rem;
+	justify-content: center;
 
-  width: 95%;
-  height: 1rem;
-  flex-wrap: wrap;
-  overflow: hidden;
+	width: 95%;
+	height: 1rem;
+	flex-wrap: wrap;
+	overflow: hidden;
 
-  color: var(--color-hashtag);
-  font-size: 1rem;
+	color: var(--color-hashtag);
+	font-size: 1rem;
+}
+
+.modal > text::before {
+	content: "#";
 }
 
 .card-item ul > li::before {
-  content: "#";
+	content: "#";
 }
 
 .card-item ul > li {
-  width: 3rem;
-  flex-wrap: wrap;
-  overflow: hidden;
+	width: 3rem;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.modal {
+	position: fixed;
+	padding: 2rem;
+
+	display: none;
+
+	background-color: var(--color-header);
+	border-radius: 1rem;
+
+	font-size: 1.5rem;
+	font-weight: bold;
+
+	z-index: 1;
 }
 
 .card-item > img {
-  width: 75%;
-  height: 48%;
-  margin: 1.6rem 0;
+	width: 75%;
+	height: 48%;
+	margin: 1.6rem 0;
 }
 
 .card-item > footer {
-  position: absolute;
-  bottom: 6%;
-  right: 10%;
+	position: absolute;
+	bottom: 6%;
+	right: 10%;
 
-  font-size: 1.5rem;
+	font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1199px) {
+	.card-item {
+		width: 16vw;
+	}
+}
+@media screen and (max-width: 992px) {
+	.card-item {
+		width: 20vw;
+	}
+}
+@media screen and (max-width: 767px) {
+	.card-item {
+		width: 26vw;
+	}
+}
+@media screen and (max-width: 600px) {
+	.card-item {
+		width: 38vw;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.card-item {
+		width: 80vw;
+	}
+	nav {
+		display: none;
+	}
+	.card-section {
+		justify-content: center;
+	}
 }
