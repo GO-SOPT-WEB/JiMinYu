@@ -11,12 +11,11 @@ const MainPage = () => {
 	const [level, setLevel] = useState("EASY");
 	const [score, setScore] = useState(0);
 	const [cardNum, setCardNum] = useState(5);
-	const [clickedFirst, setClickedFirst] = useState(null);
-	const [clickedSecond, setClickedSecond] = useState(null);
-	const [isFlipped, setIsFlipped] = useState(false);
+	// const [clickedFirst, setClickedFirst] = useState(null);
+	// const [clickedSecond, setClickedSecond] = useState(null);
 
 	// 선택한 레벨에 맞는 카드 개수 지정
-	level === "easy"
+	level === "EASY"
 		? setCardNum(5)
 		: level === "normal"
 		? setCardNum(7)
@@ -25,24 +24,22 @@ const MainPage = () => {
 	// 레벨 버튼 누르면 카드가 초기화되어야 함
 	const resetCards = () => {
 		setScore(0);
-		setClickedFirst(null);
-		setClickedSecond(null);
-		setIsFlipped(false);
+		// setClickedFirst(null);
+		// setClickedSecond(null);
 	};
 
 	// 리셋 버튼 누르면 전체 초기화 되어야 함
 	const resetAll = () => {
 		setScore(0);
 		setLevel("EASY");
-		setClickedFirst(null);
-		setClickedSecond(null);
-		setIsFlipped(false);
+		// setClickedFirst(null);
+		// setClickedSecond(null);
 	};
 
-	// 클릭시 이미지 띄우기
-	const handleClick = (image) => {
-		clickedFirst ? setClickedSecond(image) : setClickedFirst(image);
-	};
+	// // 클릭시 이미지 띄우기
+	// const handleClick = (image) => {
+	// 	clickedFirst ? setClickedSecond(image) : setClickedFirst(image);
+	// };
 
 	// 카드 맞는지 검사하기
 
