@@ -19,9 +19,6 @@ header > button {
 	z-index: 1;
 }
 main {
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-
 	background-color: lemonchiffon;
 }
 
@@ -40,4 +37,9 @@ main {
 	font-size: 1.2rem;
 	border-radius: 1rem;
 	border: 0;
+}
+
+.grid-section {
+	display: flex;
+	flex-wrap: wrap;
 }
