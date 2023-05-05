@@ -1,23 +1,29 @@
 import { Children, useState } from "react";
 import styled, { css } from "styled-components";
 
-const Button = () => {
+// 레벨 선택 버튼
+const LevelButton = () => {
 	const [isClick, setIsClick] = useState(false);
 
 	return (
-		<LevelButton
+		<StyledLevelButton
 			type="button"
 			isClick={isClick}
 			onClick={() => setIsClick((prev) => !prev)}
 		>
 			{Children}
-		</LevelButton>
+		</StyledLevelButton>
 	);
 };
 
-export { ResetButton, LevelButton };
+// 리셋버튼은 호버 시에만 색깔이 바뀐다
+const ResetButton = () => {
+	return <StyledResetButton type="button">{Children}</StyledResetButton>;
+};
 
-export const ResetButton = styled.button`
+export { LevelButton, ResetButton };
+
+const StyledResetButton = styled.button`
 	width: 50%;
 	margin: 1rem;
 	padding: 0.5rem;
@@ -27,19 +33,18 @@ export const ResetButton = styled.button`
 
 	font-weight: bold;
 	font-size: 1.2rem;
-	${(props) =>
-		props.isClick
-			? css`
-					background-color: #ffa824;
-					color: #f7437c;
-			  `
-			: css`
-					background-color: ##90ee90;
-					color: #5d1616a7;
-			  `};
+
+	background-color: #90ee90;
+	color: #5d1616a7;
+
+	&:hover {
+		background-color: #ffa824;
+		color: #f7437c;
+	}
 `;
 
-export const LevelButton = styled.button`
+// 레벨 선택 버튼 선택되면 계속 색이 바뀐 채로 있어야 한다
+const StyledLevelButton = styled.button`
 	width: 50%;
 	margin: 1rem;
 	padding: 0.5rem;
@@ -49,14 +54,9 @@ export const LevelButton = styled.button`
 
 	font-weight: bold;
 	font-size: 1.2rem;
-	${(props) =>
-		props.isClick
-			? css`
-					background-color: #ffa824;
-					color: #f7437c;
-			  `
-			: css`
-					background-color: ##90ee90;
-					color: #5d1616a7;
-			  `};
+	/* background-color: #ffa824;
+					color: #f7437c; */
+
+	background-color: #90ee90;
+	color: #5d1616a7;
 `;
