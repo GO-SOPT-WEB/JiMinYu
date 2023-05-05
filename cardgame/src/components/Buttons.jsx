@@ -1,15 +1,19 @@
 import { Children, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 // 레벨 선택 버튼
-const LevelButton = () => {
+const LevelButton = (props) => {
+	const resetCards = props;
 	const [isClick, setIsClick] = useState(false);
 
 	return (
 		<StyledLevelButton
 			type="button"
 			isClick={isClick}
-			onClick={() => setIsClick((prev) => !prev)}
+			onClick={() => {
+				setIsClick((prev) => !prev);
+				resetCards();
+			}}
 		>
 			{Children}
 		</StyledLevelButton>
@@ -17,8 +21,13 @@ const LevelButton = () => {
 };
 
 // 리셋버튼은 호버 시에만 색깔이 바뀐다
-const ResetButton = () => {
-	return <StyledResetButton type="button">{Children}</StyledResetButton>;
+const ResetButton = (props) => {
+	const resetAll = props;
+	return (
+		<StyledResetButton type="button" onClick={() => resetAll()}>
+			{Children}
+		</StyledResetButton>
+	);
 };
 
 export { LevelButton, ResetButton };
