@@ -17,7 +17,7 @@ const MainPage = () => {
 	// 선택한 레벨에 맞는 카드 개수 지정
 	level === "EASY"
 		? setCardNum(5)
-		: level === "normal"
+		: level === "NORMAL"
 		? setCardNum(7)
 		: setCardNum(9);
 
