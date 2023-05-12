@@ -4,6 +4,7 @@ const colors = {
 	Light_Green: "#BFF5CC",
 	Light_Pink: "#F6B3D3",
 	Light_Gray: "#E5E4E2",
+	Hot_Pink: "#FF69B4",
 };
 
 const theme = {
