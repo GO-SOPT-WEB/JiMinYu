@@ -1,5 +1,12 @@
+import { Outlet } from "react-router-dom";
+import { PageLayout } from "../components/PageLayout";
+
 const Mainpage = () => {
-	return <div>Hi</div>;
+	return (
+		<PageLayout>
+			<Outlet />
+		</PageLayout>
+	);
 };
 
 export default Mainpage;
