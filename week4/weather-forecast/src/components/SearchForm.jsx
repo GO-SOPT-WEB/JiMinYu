@@ -1,4 +1,5 @@
 import React from "react";
+import theme from "../styles/theme";
 import styled from "styled-components";
 
 const submitInput = () => {
@@ -26,7 +27,7 @@ const submitInput = () => {
 function SearchForm() {
 	return (
 		<SearchFormStyle.FormWrapper action="" method="get">
-			<select name="period" id="period" class="period">
+			<select name="period" id="period" className="period">
 				<option value="오늘">오늘</option>
 				<option value="주간">주간</option>
 			</select>
@@ -36,7 +37,7 @@ function SearchForm() {
 				id="area"
 				placeholder="영어로 도시명 ex)seoul"
 			/>
-			<button class="search-button" type="submit" onClick={submitInput}>
+			<button className="search-button" type="submit" onClick={submitInput}>
 				날씨 요정 소환!
 			</button>
 		</SearchFormStyle.FormWrapper>
@@ -48,23 +49,32 @@ export default SearchForm;
 const SearchFormStyle = {
 	FormWrapper: styled.form`
 		display: flex;
-		align-items: center;
-		gap: 1rem;
+		justify-content: center;
 
 		width: 100%;
+		margin-top: 2rem;
+		gap: 1rem;
 
-		border-radius: 1rem;
-		background-color: ${({ theme }) => theme.colors.Sky_Blue};
+		.period,
+		.search-button,
+		#area {
+			font-size: 2rem;
+			padding: 0.7rem;
+			font-weight: bold;
+		}
 
 		.period {
+			border-radius: 1rem;
 			background-color: ${({ theme }) => theme.colors.Light_Gray};
 		}
 
 		.search-button {
-			${({ theme }) => theme.color.Light_Pink};
+			border-radius: 1rem;
+			${({ theme }) => theme.colors.Light_Pink};
 		}
 
 		#area {
+			border-radius: 1rem;
 			padding: 1rem;
 			background-color: ${({ theme }) => theme.colors.Sky_Blue};
 		}
