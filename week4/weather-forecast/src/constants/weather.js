@@ -1,4 +1,4 @@
-export const WEATER_TYPE = [
+export const WEATHER_TYPE = [
 	{
 		description: "clear sky",
 		imgURL:
