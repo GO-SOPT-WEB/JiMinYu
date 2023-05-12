@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/Mainpage";
+import { Cards, WeekWeatherCards, DayWeatherCards } from "./components";
 
 const Router = () => {
 	return (
