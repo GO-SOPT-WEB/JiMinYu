@@ -22,5 +22,10 @@ const HeaderStyle = {
 
 		background-color: ${({ theme }) => theme.colors.Sky_Blue};
 		cursor: pointer;
+
+		h1 {
+			font-size: 3.5rem;
+			padding: 1rem;
+		}
 	`,
 };
