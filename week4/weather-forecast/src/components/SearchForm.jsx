@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 function SearchForm() {
 	// const [searchParams, setSearchParams] = useSearchParams();
 	const [input, setInput] = useState("");
-	const [option, setOption] = useState("오늘");
+	const [option, setOption] = useState("day");
 
 	const navigate = useNavigate();
 
@@ -31,8 +31,8 @@ function SearchForm() {
 				defaultValue={option}
 				onChange={handleOptionChange}
 			>
-				<option value="오늘">오늘</option>
-				<option value="주간">주간</option>
+				<option value="day">day</option>
+				<option value="week">week</option>
 			</select>
 			<input
 				type="text"
