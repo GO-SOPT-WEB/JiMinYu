@@ -112,6 +112,7 @@ const reset = css`
 	}
 	body {
 		line-height: 1;
+		background-color: ${({ theme }) => theme.colors.Light_Yellow};
 	}
 	menu,
 	ol,
@@ -139,6 +140,7 @@ const reset = css`
 `;
 export const GlobalStyle = createGlobalStyle`
 ${reset}
+
 `;
 
 export default GlobalStyle;
