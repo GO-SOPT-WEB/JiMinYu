@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import theme from "../styles/theme";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const submitInput = () => {
 	//     fetch("API 주소", {
@@ -25,9 +26,26 @@ const submitInput = () => {
 };
 
 function SearchForm() {
+	const [input, setInput] = useState("");
+	const navigate = useNavigate();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		navigate(`/${input}`);
+	};
+
+	const handleInputChange = (e) => {
+		setInput(e.target.value);
+	};
+
 	return (
-		<SearchFormStyle.FormWrapper action="" method="get">
-			<select name="period" id="period" className="period">
+		<SearchFormStyle.FormWrapper onSubmit={handleSubmit}>
+			<select
+				name="period"
+				id="period"
+				className="period"
+				defaultValue={"오늘"}
+			>
 				<option value="오늘">오늘</option>
 				<option value="주간">주간</option>
 			</select>
@@ -36,8 +54,9 @@ function SearchForm() {
 				name="area"
 				id="area"
 				placeholder="영어로 도시명 ex)seoul"
+				onChange={handleInputChange}
 			/>
-			<button className="search-button" type="submit" onClick={submitInput}>
+			<button className="search-button" type="submit">
 				날씨 요정 소환!
 			</button>
 		</SearchFormStyle.FormWrapper>
