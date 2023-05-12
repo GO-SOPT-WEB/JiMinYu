@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/Mainpage";
-import WeatherCard from "./components/WeatherCard";
+import { WeekWeatherCard, DayWeatherCard } from "./components";
 import Errorpage from "./pages/ErrorPage";
 
 const Router = () => {
@@ -8,8 +8,11 @@ const Router = () => {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<MainPage />} />
-				<Route path=":period">
-					<Route path=":area" element={<WeatherCard />} />
+				<Route path="/day">
+					<Route path=":area" element={<DayWeatherCard />} />
+				</Route>
+				<Route path="/week">
+					<Route path=":area" element={<WeekWeatherCard />} />
 				</Route>
 				<Route path=":period/" element={<Errorpage />} />
 				<Route path="/*" element={<Errorpage />} />
