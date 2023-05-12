@@ -61,3 +61,4 @@ export const WEATHER_TYPE = [
 			"https://i.pinimg.com/236x/32/86/d9/3286d9a785a9db5e15f7422a96d757fc.jpg",
 	},
 ];
+export default WEATHER_TYPE;
