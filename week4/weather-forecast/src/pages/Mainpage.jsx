@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import PageLayout from "../components/PageLayout";
-import WeatherCardList from "./WeatherCardList";
+import WeatherCard from "../components/DayWeatherCard";
 
 const Mainpage = () => {
 	return (
 		<PageLayout>
-			<WeatherCardList />
+			<WeatherCard />
 			<Outlet />
 		</PageLayout>
 	);

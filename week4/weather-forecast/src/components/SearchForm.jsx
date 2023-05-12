@@ -1,41 +1,25 @@
 import React, { useState } from "react";
-import theme from "../styles/theme";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-const submitInput = () => {
-	//     fetch("API 주소", {
-	//       method: "GET",
-	//       headers: {
-	//         "Content-Type": "Json",
-	//       },
-	//       body: ,
-	//     })
-	//       .then((response) => {
-	//         if (response.ok === true) {
-	//           return response.json();
-	//         }
-	//         throw new Error("에러 발생!");
-	//       })
-	//       .catch((error) => {
-	//         alert(error);
-	//       })
-	//       .then((data) => {
-	//         console.log(data);
-	//       });
-};
-
 function SearchForm() {
+	// const [searchParams, setSearchParams] = useSearchParams();
 	const [input, setInput] = useState("");
-	const navigate = useNavigate();
+	const [option, setOption] = useState("오늘");
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		navigate(`/${input}`);
-	};
+	const navigate = useNavigate();
 
 	const handleInputChange = (e) => {
 		setInput(e.target.value);
+	};
+
+	const handleOptionChange = (e) => {
+		setOption(e.target.value);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		navigate(`/${option}/${input}`);
 	};
 
 	return (
@@ -44,7 +28,8 @@ function SearchForm() {
 				name="period"
 				id="period"
 				className="period"
-				defaultValue={"오늘"}
+				defaultValue={option}
+				onChange={handleOptionChange}
 			>
 				<option value="오늘">오늘</option>
 				<option value="주간">주간</option>
