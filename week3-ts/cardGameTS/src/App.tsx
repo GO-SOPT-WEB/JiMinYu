@@ -4,13 +4,15 @@ import GlobalStyle from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 
+import MainPage from "./pages/mainpage";
+
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<BrowserRouter>
 				<Routes>
-					<Route></Route>
+					<Route path="/" element={<MainPage />} />
 				</Routes>
 			</BrowserRouter>
 		</ThemeProvider>
