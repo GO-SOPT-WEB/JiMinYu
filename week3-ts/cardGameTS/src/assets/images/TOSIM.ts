@@ -60,3 +60,5 @@ const TOSIM = [
 			"https://item.kakaocdn.net/do/9c67797af35b26ee079c69b8d3c74864effd194bae87d73dd00522794070855d",
 	},
 ];
+
+export default TOSIM;
