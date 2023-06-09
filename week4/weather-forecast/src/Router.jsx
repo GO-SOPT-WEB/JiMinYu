@@ -9,10 +9,10 @@ const Router = () => {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<MainPage />} />
-				<Route path="/day">
+				<Route path="day">
 					<Route path=":area" element={<DayWeatherCard />} />
 				</Route>
-				<Route path="/week">
+				<Route path="week">
 					<Route path=":area" element={<WeekWeatherCard />} />
 				</Route>
 				<Route path="/*" element={<Errorpage />} />

@@ -7,18 +7,25 @@ import WEATHER_TYPE from "../constants/weather";
 
 const WeekWeatherCard = () => {
 	const { area } = useParams();
-	const weekWeatherInfo = getWeekWeatherInfo(area);
 	const [weatherImage, setWeatherImage] = useState("");
+	const [weekWeatherInfo, setWeekWeatherInfo] = useState(null);
 
-	//사진 업데이트
-	useEffect(() => {
+	async function fetchWeekWeatherInfo(area) {
+		const weatherData = await getWeekWeatherInfo(area);
+		setWeekWeatherInfo(weatherData);
 		setWeatherImage(
 			WEATHER_TYPE.filter(
 				(image) =>
 					image?.description === weekWeatherInfo?.weather?.[0]?.description
 			)[0]?.imgURL
 		);
-	}, [weekWeatherInfo]);
+	}
+	//사진 업데이트
+	useEffect(() => {
+		if (area) {
+			fetchWeekWeatherInfo(area);
+		}
+	}, [area]);
 
 	return (
 		<PageLayout>
