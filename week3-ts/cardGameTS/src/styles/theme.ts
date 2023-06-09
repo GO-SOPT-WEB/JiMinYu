@@ -1,16 +1,14 @@
 const colors = {
-	primary_200: "#2CB67D",
-	primary_100: "#8fd3b1",
-	primary_300: "#009a5c",
+	pink_100: "#FCBACB",
+	pink_200: "#FC94AF",
+	pink_300: "#FE7F9C",
 
-	secondary_100: "#bbe4cf",
-	secondary_200: "#00884f",
+	coral_100: "#FDAB9F",
+	coral_200: "#FC9483",
+	coral_300: "#FE7D6A",
 
 	error_100: "#ef5350",
 	error_200: "#d32f2f",
-
-	warning_100: "#ff9800",
-	warning_200: "#ed6c02",
 
 	white_300: "#fff",
 	white_200: "#ffffff7a",
