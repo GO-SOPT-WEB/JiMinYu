@@ -10,7 +10,7 @@ export const Root = styled.header`
 	justify-content: space-around;
 	align-items: center;
 
-	height: 15%;
+	height: 6rem;
 	width: 100%;
 	padding: 2rem;
 
@@ -21,6 +21,7 @@ export const Root = styled.header`
 	z-index: 999;
 	h1 {
 		font-size: 3rem;
+		color: ${theme.colors.white_300};
 	}
 `;
 
