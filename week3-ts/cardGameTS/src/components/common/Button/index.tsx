@@ -11,7 +11,7 @@ const Button = styled.button`
 
 	border-radius: 20px;
 	box-shadow: ${({ theme }) => theme.shadow.type_1};
-	font-weight: 400;
+	font-weight: 500;
 `;
 
 export default Button;
