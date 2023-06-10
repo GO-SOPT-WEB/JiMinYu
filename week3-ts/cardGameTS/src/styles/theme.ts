@@ -2,10 +2,18 @@ const colors = {
 	pink_100: "#FCBACB",
 	pink_200: "#FC94AF",
 	pink_300: "#FE7F9C",
+	pink_400: "#F25278",
+	pink_500: "#FC46AA",
 
 	coral_100: "#FDAB9F",
 	coral_200: "#FC9483",
 	coral_300: "#FE7D6A",
+	light_coral_100: "#FFE4E1",
+	light_coral_200: "#FFC0C0",
+
+	green_100: "#99EDC3",
+	green_200: "#03C04A",
+	green_300: "#3CB043",
 
 	error_100: "#ef5350",
 	error_200: "#d32f2f",
