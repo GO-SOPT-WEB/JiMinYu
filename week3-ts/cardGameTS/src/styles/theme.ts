@@ -34,8 +34,8 @@ const colors = {
 };
 
 const shadow = {
-	type_1: "rgba(0, 0, 0, 0.09) 0px 2px 5px 0px",
-	type_2: "rgba(100, 100, 111, 0.2) 0px -11px 15px -10px",
+	type_1: "rgba(0, 0, 0, 0.3) 1px 2px 3px 0px",
+	type_2: "rgba(245, 39, 133, 0.58) 3px 3px 2px 0px",
 	type_3: "rgba(100, 100, 111, 0.2) 0px 11px 0px 0px",
 };
 
