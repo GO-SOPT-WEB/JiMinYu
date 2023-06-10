@@ -4,7 +4,7 @@ import GlobalStyle from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 
-import MainPage from "./pages/mainpage";
+import MainPage from "./pages/MainPage";
 
 function App() {
 	return (
