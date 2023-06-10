@@ -40,13 +40,13 @@ export const CardItemsSection = styled.section`
 	column-gap: 1rem;
 	row-gap: 1rem;
 	margin: 1rem 0 1rem 0;
-	width: 50%;
+	width: 70%;
 	height: fit-content;
 `;
 
 export const CardItem = styled.article<{
-	isFlipped: boolean;
-	isCorrect: boolean;
+	flipped: boolean;
+	correct: boolean;
 }>`
 	width: 12.5rem;
 	height: 16.5rem;
@@ -58,6 +58,20 @@ export const CardItem = styled.article<{
 	background-color: ${theme.colors.green_200};
 	border-radius: 15px;
 	box-shadow: ${theme.shadow.type_2};
+
+	& > .cardFront {
+		transform: rotateY(0deg);
+	}
+
+	& > .cardBack {
+		transform: rotateY(180deg);
+	}
+
+	${({ flipped }) =>
+		flipped &&
+		css`
+			transform: rotateY(180deg);
+		`}
 `;
 
 export const CardImgBack = styled.img`
